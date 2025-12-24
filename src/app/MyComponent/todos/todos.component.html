@@ -1,0 +1,15 @@
+<!-- <div>
+  @for (todo of todos; track todo.sno) {
+    <li>
+      <h3>{{ todo.title }}</h3>
+      <p>{{ todo.desc }}</p>
+      <p>Status: {{ todo.active ? 'Active' : 'Inactive' }}</p>
+    </li>
+  }
+</div> -->
+
+<div>
+  @for (todo of todos; track todo.sno) {
+    <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo-item>
+  }
+</div> 
