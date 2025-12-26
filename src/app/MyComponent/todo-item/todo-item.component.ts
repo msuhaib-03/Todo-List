@@ -24,5 +24,7 @@ export class TodoItemComponent {
     this.todoCheckbox.emit(todo);
     console.log("Checkbox click has been triggered!");
   }
-  constructor() { }
+  constructor() {
+    
+   }
 }
