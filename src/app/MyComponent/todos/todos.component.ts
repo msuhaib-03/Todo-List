@@ -1,11 +1,12 @@
 import { Component} from '@angular/core';
 import { Todo } from '../../Todo';
 import { TodoItemComponent } from "../todo-item/todo-item.component";
+import { AddTodoComponent } from "../add-todo/add-todo.component";
 
 @Component({
   selector: 'app-todos',
   standalone: true,
-  imports: [TodoItemComponent],
+  imports: [TodoItemComponent, AddTodoComponent],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.css'
 })
