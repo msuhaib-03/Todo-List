@@ -22,5 +22,7 @@ export class AddTodoComponent {
       desc : this.desc,
       active: true
     }
+    this.todoAdd.emit(todo);
+    console.log("Todo has been added!");
   }
 }

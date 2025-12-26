@@ -1,15 +1,13 @@
-<!-- <div>
-  @for (todo of todos; track todo.sno) {
-    <li>
-      <h3>{{ todo.title }}</h3>
-      <p>{{ todo.desc }}</p>
-      <p>Status: {{ todo.active ? 'Active' : 'Inactive' }}</p>
-    </li>
+<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+<h4>Your Todos</h4>
+  @if (todos.length == 0) {
+    <p>No Todos to display</p>
+  }@else {
+    <p>Here are your todos</p>
   }
-</div> -->
-<app-add-todo> </app-add-todo>
-<div>
+
+  <div>
   @for (todo of todos; track todo.sno) {
-    <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo-item>
+    <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
   }
 </div> 
