@@ -10,6 +10,7 @@ import { Todo } from '../../Todo';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent {
+  @Input() i!: number;
   @Input({required: true}) 
   todo!: Todo;
   @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();

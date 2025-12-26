@@ -1,4 +1,4 @@
-import { Component, Inject} from '@angular/core';
+import { Component, Inject, Input} from '@angular/core';
 import { Todo } from '../../Todo';
 import { TodoItemComponent } from "../todo-item/todo-item.component";
 import { AddTodoComponent } from "../add-todo/add-todo.component";

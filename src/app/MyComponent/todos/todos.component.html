@@ -7,7 +7,7 @@
   }
 
   <div>
-  @for (todo of todos; track todo.sno) {
-    <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
+  @for (todo of todos; track todo.sno; let i = $index) {
+    <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
   }
 </div> 
